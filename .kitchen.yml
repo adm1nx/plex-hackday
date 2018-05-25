@@ -2,7 +2,7 @@
 driver:
 
 provisioner:
-  name: chef_solo
+  name: chef_zero
   roles_path: ../../roles
   data_bags_path: ../../data_bags
   environments_path: ../../environments
@@ -20,10 +20,18 @@ platforms:
   - name: ubuntu-16.04
 
 suites:
-  - name: server
+  - name: plex-server
     run_list:
       - recipe[plex-hackday::server]
     verifier:
       inspec_tests:
         - test/smoke/server
-    attributes:
+    attributes: { plex_role: "server" }
+
+  - name: plex-client
+    run_list:
+      - recipe[plex-hackday::default]
+    verifier:
+      inspec_tests:
+        - test/smoke/default
+    attributes: { plex_role: "client" }
