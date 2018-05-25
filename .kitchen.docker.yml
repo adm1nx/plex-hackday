@@ -1,0 +1,5 @@
+---
+# You must install the docker driver first. "chef gem install kitchen-docker"
+driver:
+  name: docker
+  use_sudo: false

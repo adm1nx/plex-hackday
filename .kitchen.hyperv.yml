@@ -1,0 +1,9 @@
+---
+driver:
+  name: vagrant
+  parent_vhd_folder: D:\HyperV\Virtual Hard Disks
+  parent_vhd_name: plex-hackday.vhdx
+  vm_switch: Default Switch
+  network:
+    - ["private_network", {bridge: "Default Switch"}]
+  provider: hyperv
