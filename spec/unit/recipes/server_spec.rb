@@ -15,6 +15,16 @@ describe 'plex-hackday::server' do
       runner.converge(described_recipe)
     end
 
+    it 'intalls plex' do 
+      expect(chef_run).to create_remote_file('/opt/plexmediaserver.deb')
+      expect(chef_run).to install_package('plexmediaserver')
+    end
+
+    it 'adds big buck bunny to the library' do 
+      expect(chef_run).to create_file('/path/to/big_buck_bunny.mp4')
+    end
+      
+
     it 'converges successfully' do
       expect { chef_run }.to_not raise_error
     end
