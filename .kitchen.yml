@@ -20,10 +20,10 @@ platforms:
   - name: ubuntu-16.04
 
 suites:
-  - name: default
+  - name: server
     run_list:
-      - recipe[plex-hackday::default]
+      - recipe[plex-hackday::server]
     verifier:
       inspec_tests:
-        - test/smoke/default
+        - test/smoke/server
     attributes:
