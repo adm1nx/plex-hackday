@@ -6,7 +6,7 @@
 # found at http://inspec.io/docs/reference/resources/
 
 # TODO: get correct package name for plex server
-describe package("plex") do
+describe package("plexmediaserver") do
   it { should be_installed }
 end
 

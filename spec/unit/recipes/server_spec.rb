@@ -16,7 +16,7 @@ describe 'plex-hackday::server' do
     end
 
     it 'intalls plex' do 
-      expect(chef_run).to create_remote_file('/path/to/plexmediaserver_1.13.0.5023-31d3c0c65_amd64.deb')
+      expect(chef_run).to create_remote_file('/opt/plexmediaserver.deb')
       expect(chef_run).to install_package('plexmediaserver')
     end
 
