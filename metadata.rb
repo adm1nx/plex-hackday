@@ -1,9 +1,9 @@
 name 'plex-hackday'
-maintainer 'The Authors'
-maintainer_email 'you@example.com'
+maintainer 'Chris Nowicki, Sean Martin, James Massardo, Adam Rohacs'
+maintainer_email 'chris.nowicki@gmail.com'
 license 'All Rights Reserved'
-description 'Installs/Configures plex-hackday'
-long_description 'Installs/Configures plex-hackday'
+description 'Installs/Configures plex media server on Ubuntu'
+long_description 'Installs/Configures plex media server on Ubuntu. A Chef hackday product!'
 version '0.1.0'
 chef_version '>= 12.1' if respond_to?(:chef_version)
 
